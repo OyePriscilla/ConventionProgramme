@@ -17,13 +17,13 @@ function App() {
   const churchProgram: ProgramDay[] = [
     {
       day: "Day 1",
-      date: "Friday, July 26th, 4:00pm, Welcome Service",
+      date: "Friday, June 11th, 4:00pm, Welcome Service",
       events: [
         {
           time: "4:00 PM",
           title: "Hymns",
           icon: "🎶",
-          description: "Hymn Announcer: Sis. Beatitudes; Hymns: RH 712, RH 370 & RH 393",
+          description: `Hymn Announcer: Sis. Beatitudes; <br>Hymns: RH 712, RH 370 & RH 393`,
         },
         {
           time: "7:00 PM",
@@ -46,6 +46,12 @@ function App() {
         },
         {
           time: "8:45 PM",
+          title: "Prohetical Ministration",
+          icon: ":🔮",
+          description: "We trust the Lord to speak through His servants...",
+        },
+        {
+          time: "8:45 PM",
           title: "Theme Analysis (Ministry Plan)",
           icon: "📘",
           description:
@@ -55,13 +61,19 @@ function App() {
     },
     {
       day: "Day 2",
-      date: "Saturday, July 27th",
+      date: "Saturday, June 11th",
       events: [
         {
           time: "9:00 AM",
           title: "Convention Service",
           icon: "⛪",
           description: "A refreshing time of communal worship and reflection...",
+        },
+        {
+          time: "8:45 PM",
+          title: "Prohetical Ministration",
+          icon: ":🔮",
+          description: "We trust the Lord to speak through His servants...",
         },
         {
           time: "10:00 AM",
@@ -79,7 +91,7 @@ function App() {
     },
     {
       day: "Day 3",
-      date: "Sunday, July 28th",
+      date: "Sunday, June 11th",
       events: [
         {
           time: "9:30 AM",
@@ -92,6 +104,12 @@ function App() {
           title: "Convention Service",
           icon: "⛪",
           description: "...",
+        },
+        {
+          time: "8:45 PM",
+          title: "Prohetical Ministration",
+          icon: ":🔮",
+          description: "We trust the Lord to speak through His servants...",
         },
         {
           time: "12:30 PM",
@@ -197,7 +215,7 @@ function App() {
                         }`}
                       >
                         <div
-                          className="text-sm text-gray-700 dark:text-gray-300 mt-2"
+                          className="text-sm font-medium text-gray-700 dark:text-gray-300 mt-2"
                           dangerouslySetInnerHTML={{ __html: event.description }}
                         />
                       </div>
