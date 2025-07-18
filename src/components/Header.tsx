@@ -121,7 +121,7 @@ const HeaderWithTabs = () => {
                     href="mailto:oyebadepriscilla@gmail.com" 
                     className="text-blue-300 hover:text-yellow-400 transition-colors duration-300 underline"
                   >
-                    oyebadepriscilla@gmail.com
+                    oyebadepriscilla22@gmail.com
                   </a>
                 </p>
                 <p className="flex items-center justify-center gap-2">
