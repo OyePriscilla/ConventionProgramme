@@ -126,36 +126,43 @@ const ProgramSchedule = () => {
                   {dayData.services.map((service, serviceIndex) => (
                     <div
                       key={serviceIndex}
-                      className="bg-gray-700 rounded-lg p-4 shadow-md border border-gray-600 hover:border-blue-500 transition-colors duration-200"
+                      className="bg-gray-700 rounded-lg p-6 shadow-lg border border-gray-600 hover:border-blue-500 transition-colors duration-200"
                     >
-                      <div className="flex items-center mb-2">
-                        <span className="text-lg font-semibold text-blue-300 mr-3">
+                      <div className="flex flex-col sm:flex-row sm:items-center mb-4 text-left">
+                        <span className="text-2xl font-bold text-blue-300 mb-2 sm:mb-0 sm:mr-4">
                           {service.time}
                         </span>
-                        <h4 className="text-xl font-bold text-teal-300">
+                        <h4 className="text-2xl font-extrabold text-teal-300">
                           {service.nature}
                         </h4>
                       </div>
-                      {service.scripture && (
-                        <p className="text-gray-300 text-sm mb-1">
-                          <span className="font-semibold text-yellow-300">Scriptural Passage:</span> {service.scripture}
-                        </p>
-                      )}
-                      {service.hymn && (
-                        <p className="text-gray-300 text-sm mb-1">
-                          <span className="font-semibold text-yellow-300">Hymn(s):</span> {service.hymn}
-                        </p>
-                      )}
-                      {service.minister && (
-                        <p className="text-gray-300 text-sm mb-1">
-                          <span className="font-semibold text-yellow-300">Speaker:</span> {service.minister}
-                        </p>
-                      )}
-                      {service.conductor && (
-                        <p className="text-gray-300 text-sm">
-                          <span className="font-semibold text-yellow-300">Conductor:</span> {service.conductor}
-                        </p>
-                      )}
+                      
+                      <div className="space-y-3 text-left">
+                        {service.scripture && (
+                          <p className="text-gray-200 text-lg leading-relaxed">
+                            <span className="font-bold text-yellow-400 text-xl">Scriptural Passage:</span> 
+                            <span className="ml-2 font-medium">{service.scripture}</span>
+                          </p>
+                        )}
+                        {service.hymn && (
+                          <p className="text-gray-200 text-lg leading-relaxed">
+                            <span className="font-bold text-yellow-400 text-xl">Hymn(s):</span> 
+                            <span className="ml-2 font-medium">{service.hymn}</span>
+                          </p>
+                        )}
+                        {service.minister && (
+                          <p className="text-gray-200 text-lg leading-relaxed">
+                            <span className="font-bold text-yellow-400 text-xl">Speaker:</span> 
+                            <span className="ml-2 font-medium">{service.minister}</span>
+                          </p>
+                        )}
+                        {service.conductor && (
+                          <p className="text-gray-200 text-lg leading-relaxed">
+                            <span className="font-bold text-yellow-400 text-xl">Conductor:</span> 
+                            <span className="ml-2 font-medium">{service.conductor}</span>
+                          </p>
+                        )}
+                      </div>
                     </div>
                   ))}
                 </div>
