@@ -2,7 +2,7 @@ import { useState } from "react";
 import ProgramAnalysisTab from "./ProgramAnalysis";
 import AnthemsTab from "./AnthemsTab_fixed";
 import ProgramSchedule from "./ProgramSchedule";
-import backgroundImagePath1 from "../assets/witness.png"; // ✅ Make sure this path matches your actual asset location and is under /public or /assets folder
+import backgroundImagePath1 from "../assets/witness.jpg"; 
 import logo1 from "../assets/logo1.jpg"
 import logo2 from "../assets/logo2.jpg"
 
@@ -106,6 +106,22 @@ const HeaderWithTabs = () => {
           )}
         </div>
       </div>
+      
+      {/* Footer - moved outside main content container */}
+      <footer className="relative z-10 bg-gray-800/90 backdrop-blur-sm text-gray-200 py-6 mt-12 shadow-inner border-t border-gray-600">
+        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+          <div className="text-center md:text-left">
+            <p className="font-semibold text-lg text-yellow-300">Priscilla Oyebade</p>
+            <p>Email: <a href="mailto:oyebadepriscilla@gmail.com" className="hover:text-yellow-400 transition-colors">oyebadepriscilla@gmail.com</a></p>
+            <p>Phone: <a href="tel:+2348036605211" className="hover:text-yellow-400 transition-colors">+234 803 660 5211</a></p>
+          </div>
+
+          <div className="text-center md:text-right mt-2 md:mt-0">
+            <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
+            <p className="italic text-gray-400">Built with 💖 using React & Tailwind CSS</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
