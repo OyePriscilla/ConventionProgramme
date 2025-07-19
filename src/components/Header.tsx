@@ -108,17 +108,55 @@ const HeaderWithTabs = () => {
       </div>
       
       {/* Footer - moved outside main content container */}
-      <footer className="relative z-10 bg-gray-800/90 backdrop-blur-sm text-gray-200 py-6 mt-12 shadow-inner border-t border-gray-600">
-        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <div className="text-center md:text-left">
-            <p className="font-semibold text-lg text-yellow-300">Priscilla Oyebade</p>
-            <p>Email: <a href="mailto:oyebadepriscilla@gmail.com" className="hover:text-yellow-400 transition-colors">oyebadepriscilla@gmail.com</a></p>
-            <p>Phone: <a href="tel:+2348036605211" className="hover:text-yellow-400 transition-colors">+234 803 660 5211</a></p>
-          </div>
+      <footer className="relative z-10 bg-gray-800/95 backdrop-blur-sm text-gray-200 py-8 mt-12 shadow-inner border-t border-gray-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center text-center gap-6">
+            {/* Contact Developer - Centralized */}
+            <div className="space-y-4">
+              <h3 className="font-bold text-xl text-yellow-300">Contact Me</h3>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-center gap-4 sm:gap-8 text-sm sm:text-base">
+                <p className="flex items-center justify-center gap-2">
+                  <span className="font-medium text-gray-300">Email:</span>
+                  <a 
+                    href="mailto:oyebadepriscilla@gmail.com" 
+                    className="text-blue-300 hover:text-yellow-400 transition-colors duration-300 underline"
+                  >
+                    oyebadepriscilla@gmail.com
+                  </a>
+                </p>
+                <p className="flex items-center justify-center gap-2">
+                  <span className="font-medium text-gray-300">Phone:</span>
+                  <a 
+                    href="tel:+2348036605211" 
+                    className="text-blue-300 hover:text-yellow-400 transition-colors duration-300 underline"
+                  >
+                    +234 803 660 5211
+                  </a>
+                </p>
+              </div>
+            </div>
 
-          <div className="text-center md:text-right mt-2 md:mt-0">
-            <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
-            <p className="italic text-gray-400">Built with 💖 using React & Tailwind CSS</p>
+            {/* Quiz App Link - Centralized */}
+            <div className="space-y-3">
+              <p className="text-pink-300 font-medium text-sm sm:text-base">
+                Want to test your knowledge of the Scriptures?
+              </p>
+              <a
+                href="https://oyepriscilla.github.io/QuizAppFrontend/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-white text-white font-bold px-8 py-4 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300 text-base sm:text-lg"
+              >
+                Try this Bible Quiz →
+              </a>
+            </div>
+
+            {/* Copyright - Centralized */}
+            <div className="pt-4 border-t border-gray-600 w-full">
+              <p className="text-gray-400 italic text-xs sm:text-sm">
+                &copy; {new Date().getFullYear()} Built with ❤️ using React + Tailwind CSS
+              </p>
+            </div>
           </div>
         </div>
       </footer>
