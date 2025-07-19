@@ -227,50 +227,74 @@ const ProgramAnalysisTab = () => {
                     <style>{`
                       /* Consistent styling for content within the accordion */
                       .prose h3 {
-                        color: #1f2937;
-                        font-size: 1.75rem;
-                        font-weight: 800;
+                        color: #000000;
+                        font-size: 1.875rem;
+                        font-weight: 900;
                         margin-bottom: 1.5rem;
-                        text-align: center;
-                        background: linear-gradient(45deg, #4F46E5, #9333EA);
+                        text-align: left;
+                        background: linear-gradient(45deg, #1F2937, #374151);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                         background-clip: text;
-                      }
-                      .prose h4 {
-                        color: #374151;
-                        font-size: 1.4rem;
-                        font-weight: 700;
-                        margin-top: 2rem;
-                        margin-bottom: 1rem;
-                        border-bottom: 2px solid #D1D5DB;
+                        border-bottom: 3px solid #3B82F6;
                         padding-bottom: 0.5rem;
                       }
+                      .prose h4 {
+                        color: #000000;
+                        font-size: 1.5rem;
+                        font-weight: 800;
+                        margin-top: 2rem;
+                        margin-bottom: 1rem;
+                        text-align: left;
+                        background: #F59E0B;
+                        color: white;
+                        padding: 0.75rem 1rem;
+                        border-radius: 0.5rem;
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                      }
                       .prose p {
-                        color: #374151;
-                        font-size: 1.1rem;
+                        color: #000000;
+                        font-size: 1.125rem;
                         line-height: 1.8;
-                        text-align: justify;
-                        margin-bottom: 1.25rem;
+                        text-align: left;
+                        margin-bottom: 1.5rem;
+                        font-weight: 500;
                       }
                       .prose ul {
-                        margin-left: 2rem;
-                        margin-bottom: 1.75rem;
-                        list-style-type: disc;
+                        margin-left: 0;
+                        margin-bottom: 2rem;
+                        list-style-type: none;
+                        padding-left: 1rem;
                       }
                       .prose li {
-                        color: #4b5563;
-                        font-size: 1.05rem;
-                        line-height: 1.7;
-                        margin-bottom: 0.75rem;
-                        text-align: justify;
+                        color: #000000;
+                        font-size: 1.1rem;
+                        line-height: 1.8;
+                        margin-bottom: 1rem;
+                        text-align: left;
+                        font-weight: 500;
+                        position: relative;
+                        padding-left: 1.5rem;
+                        border-left: 3px solid #3B82F6;
+                        background: #F8FAFC;
+                        padding: 0.75rem 1rem 0.75rem 2rem;
+                        border-radius: 0.375rem;
+                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
                       }
-                      .prose ul li::marker {
-                        color: #4F46E5;
+                      .prose li::before {
+                        content: "▶";
+                        color: #3B82F6;
                         font-weight: bold;
+                        position: absolute;
+                        left: 0.5rem;
+                        top: 0.75rem;
                       }
                       .prose strong {
-                        color: #1F2937;
+                        color: #000000;
+                        font-weight: 700;
+                        background: #FEF3C7;
+                        padding: 0.125rem 0.25rem;
+                        border-radius: 0.25rem;
                       }
                     `}</style>
                     {activeDay === dayData.date && <div dangerouslySetInnerHTML={{ __html: dayData.content }} />}

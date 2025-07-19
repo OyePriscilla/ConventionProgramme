@@ -87,7 +87,7 @@ const ProgramSchedule = () => {
 
   return (
     <div className="bg-gray-900 min-h-screen text-gray-100 p-4 sm:p-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-full mx-auto">
         <h2 className="text-4xl font-extrabold text-center mb-12 text-blue-400">
           CONVENTION PROGRAM SCHEDULE
         </h2>
@@ -122,49 +122,51 @@ const ProgramSchedule = () => {
               }`}
             >
               <div className="overflow-hidden p-0"> {/* Use p-0 here and add padding to inner cards */}
-                <div className="space-y-4 p-4 sm:p-6"> {/* Padding applied here */}
-                  {dayData.services.map((service, serviceIndex) => (
-                    <div
-                      key={serviceIndex}
-                      className="bg-gray-700 rounded-lg p-6 shadow-lg border border-gray-600 hover:border-blue-500 transition-colors duration-200"
-                    >
-                      <div className="flex flex-col sm:flex-row sm:items-center mb-4 text-left">
-                        <span className="text-2xl font-bold text-blue-300 mb-2 sm:mb-0 sm:mr-4">
-                          {service.time}
-                        </span>
-                        <h4 className="text-2xl font-extrabold text-teal-300">
-                          {service.nature}
-                        </h4>
+                <div className="p-4 sm:p-6"> {/* Padding applied here */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {dayData.services.map((service, serviceIndex) => (
+                      <div
+                        key={serviceIndex}
+                        className="bg-gray-700 rounded-lg p-6 shadow-lg border border-gray-600 hover:border-blue-500 transition-colors duration-200 min-h-[300px]"
+                      >
+                        <div className="flex flex-col sm:flex-row sm:items-center mb-4 text-left">
+                          <span className="text-2xl font-bold text-blue-300 mb-2 sm:mb-0 sm:mr-4">
+                            {service.time}
+                          </span>
+                          <h4 className="text-2xl font-extrabold text-teal-300">
+                            {service.nature}
+                          </h4>
+                        </div>
+                        
+                        <div className="space-y-3 text-left">
+                          {service.scripture && (
+                            <p className="text-gray-200 text-lg leading-relaxed">
+                              <span className="font-bold text-yellow-400 text-xl">Scriptural Passage:</span> 
+                              <span className="ml-2 font-medium">{service.scripture}</span>
+                            </p>
+                          )}
+                          {service.hymn && (
+                            <p className="text-gray-200 text-lg leading-relaxed">
+                              <span className="font-bold text-yellow-400 text-xl">Hymn(s):</span> 
+                              <span className="ml-2 font-medium">{service.hymn}</span>
+                            </p>
+                          )}
+                          {service.minister && (
+                            <p className="text-gray-200 text-lg leading-relaxed">
+                              <span className="font-bold text-yellow-400 text-xl">Speaker:</span> 
+                              <span className="ml-2 font-medium">{service.minister}</span>
+                            </p>
+                          )}
+                          {service.conductor && (
+                            <p className="text-gray-200 text-lg leading-relaxed">
+                              <span className="font-bold text-yellow-400 text-xl">Conductor:</span> 
+                              <span className="ml-2 font-medium">{service.conductor}</span>
+                            </p>
+                          )}
+                        </div>
                       </div>
-                      
-                      <div className="space-y-3 text-left">
-                        {service.scripture && (
-                          <p className="text-gray-200 text-lg leading-relaxed">
-                            <span className="font-bold text-yellow-400 text-xl">Scriptural Passage:</span> 
-                            <span className="ml-2 font-medium">{service.scripture}</span>
-                          </p>
-                        )}
-                        {service.hymn && (
-                          <p className="text-gray-200 text-lg leading-relaxed">
-                            <span className="font-bold text-yellow-400 text-xl">Hymn(s):</span> 
-                            <span className="ml-2 font-medium">{service.hymn}</span>
-                          </p>
-                        )}
-                        {service.minister && (
-                          <p className="text-gray-200 text-lg leading-relaxed">
-                            <span className="font-bold text-yellow-400 text-xl">Speaker:</span> 
-                            <span className="ml-2 font-medium">{service.minister}</span>
-                          </p>
-                        )}
-                        {service.conductor && (
-                          <p className="text-gray-200 text-lg leading-relaxed">
-                            <span className="font-bold text-yellow-400 text-xl">Conductor:</span> 
-                            <span className="ml-2 font-medium">{service.conductor}</span>
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
